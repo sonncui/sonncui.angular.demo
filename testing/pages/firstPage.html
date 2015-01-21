@@ -1,0 +1,12 @@
+<h2>what to eat</h2>
+<a ng-click="select()">select my food</a>
+<button  ng-click="select()">select my food</button>
+<ul ng-repeat="item in items">
+    <li>
+        <input type="checkbox" ng-model="item.selected">
+        <span>{{item.text}}</span>
+    </li>
+</ul>
+<div>{{myFood}}</div>
+<input type="text" ng-model="addText">
+<button ng-click="addItem()">AddItem</button>
