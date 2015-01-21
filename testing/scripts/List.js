@@ -30,4 +30,5 @@ angular.module('myList',['ngRoute'])
             }
             $locate.path('/myfood');
         };
-    }]);
+    }])
+    .controller('MyFoodController',['$scope','$rootScope',function($scope,$rootScope){}]);
