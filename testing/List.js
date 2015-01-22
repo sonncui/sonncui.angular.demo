@@ -2,8 +2,9 @@
  * Created by ccsong on 1/14/15.
  */
 "use strict";
-angular.module('myList',['ngRoute'])
-    .config(['$routeProvider', function($routeProvider) {
+
+var app = angular.module('myList',['ngRoute']);
+app.config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl:'pages/firstPage.html',
@@ -13,8 +14,8 @@ angular.module('myList',['ngRoute'])
                 templateUrl:'pages/myfood.html',
                 controller:'MyFoodController'
             })
-    }])
-    .controller('ListController',['$scope','$location',function($scope,$location){
+    }]);
+app.controller('ListController',['$scope','$location',function($scope,$location){
         $scope.items = [{text:"chicken",selected:false},{text:"beaf",selected:false},{text:"veg",selected:false}];
 
         $scope.addItem = function(){
