@@ -14,7 +14,7 @@ angular.module('myList',['ngRoute'])
                 controller:'MyFoodController'
             })
     }])
-    .controller('ListController',['$scope','$locate',function($scope,$locate){
+    .controller('ListController',['$scope','$location',function($scope,$location){
         $scope.items = [{text:"chicken",selected:false},{text:"beaf",selected:false},{text:"veg",selected:false}];
 
         $scope.addItem = function(){
@@ -28,6 +28,6 @@ angular.module('myList',['ngRoute'])
                     $scope.myFood = $scope.items[item].text;
                 }
             }
-            $locate.path('/myfood');
+            $location.path('/myfood');
         };
     }]);
